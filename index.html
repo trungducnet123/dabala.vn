@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Khám phá bộ thẻ Kinh Dịch Dabala — 64 quẻ, hướng dẫn giải nghĩa và ứng dụng gieo quẻ mỗi ngày.">
+  <meta name="theme-color" content="#f7f4ed">
+  <title>Dabala — Khám phá trí tuệ Kinh Dịch</title>
+  <style>
+    :root {
+      --paper: #f7f4ed;
+      --ink: #252b24;
+      --muted: #73776c;
+      --green: #344b3b;
+      --gold: #b58a4a;
+      --line: #e4dfd4;
+      --white: #fffdf8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      height: 82px; display: flex; align-items: center;
+      border-bottom: 1px solid rgba(50,60,45,.10);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand img { display: block; width: 142px; max-height: 54px; object-fit: contain; }
+    .nav-link { color: var(--green); font-size: 14px; font-weight: 650; }
+    .hero {
+      min-height: 490px; display: grid; grid-template-columns: 1.05fr .95fr;
+      align-items: center; gap: 48px; padding: 64px 0 72px;
+    }
+    .eyebrow {
+      color: var(--gold); text-transform: uppercase; letter-spacing: .18em;
+      font-size: 11px; font-weight: 750; margin: 0 0 18px;
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 5.2vw, 68px); line-height: 1.08;
+      letter-spacing: -.035em; font-weight: 500; margin: 0 0 22px;
+    }
+    .hero-copy { max-width: 500px; color: var(--muted); font-size: 17px; margin: 0 0 30px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 14px 23px; border-radius: 3px; background: var(--green);
+      color: white; font-size: 14px; font-weight: 700; transition: transform .2s, background .2s;
+    }
+    .button:hover { background: #26392c; transform: translateY(-2px); }
+    .hero-art { position: relative; }
+    .hero-art img {
+      width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover;
+      display: block; border-radius: 4px;
+    }
+    .products { padding: 74px 0 96px; background: var(--white); }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 34px; }
+    h2 {
+      font-family: Georgia, "Times New Roman", serif; font-weight: 500;
+      font-size: clamp(32px, 4vw, 46px); line-height: 1.15; margin: 0;
+    }
+    .section-note { max-width: 360px; color: var(--muted); font-size: 14px; margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .product { min-width: 0; }
+    .product-image {
+      display: block; overflow: hidden; background: #eee9df; border-radius: 4px;
+      aspect-ratio: 4 / 4.5; margin-bottom: 20px;
+    }
+    .product-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s; }
+    .product:hover .product-image img { transform: scale(1.035); }
+    .product h3 {
+      font-family: Georgia, "Times New Roman", serif; font-size: 25px;
+      font-weight: 500; margin: 0 0 8px;
+    }
+    .product p { color: var(--muted); font-size: 14px; margin: 0 0 18px; min-height: 44px; }
+    .buy { display: inline-flex; gap: 9px; align-items: center; color: var(--green); font-weight: 750; font-size: 13px; }
+    .buy span { transition: transform .2s; }
+    .buy:hover span { transform: translateX(4px); }
+    .closing { padding: 74px 0; text-align: center; }
+    .closing p { color: var(--muted); max-width: 540px; margin: 16px auto 26px; }
+    footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 32px, 560px); }
+      header { height: 70px; }
+      .brand img { width: 120px; }
+      .hero { grid-template-columns: 1fr; gap: 30px; padding: 52px 0 58px; }
+      .hero-copy { font-size: 16px; }
+      .hero-art img { aspect-ratio: 1.35 / 1; }
+      .products { padding: 58px 0 68px; }
+      .section-head { display: block; }
+      .section-note { margin-top: 14px; }
+      .grid { grid-template-columns: 1fr; gap: 42px; }
+      .product-image { aspect-ratio: 1 / 1; margin-bottom: 16px; }
+      .product p { min-height: 0; }
+      .closing { padding: 58px 0; }
+      .footer-inner { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Dabala trang chủ">
+        <img src="images/logo.png" alt="Dabala">
+      </a>
+      <a class="nav-link" href="#san-pham">Khám phá bộ bài <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <p class="eyebrow">Dabala · Trí tuệ Kinh Dịch</p>
+        <h1>Lắng nghe câu hỏi.<br>Khám phá quẻ Dịch.</h1>
+        <p class="hero-copy">Bộ thẻ Kinh Dịch giúp bạn tiếp cận 64 quẻ cổ xưa, suy ngẫm về những lựa chọn và tìm góc nhìn mới trong cuộc sống thường ngày.</p>
+        <a class="button" href="#san-pham">Khám phá bộ bài <span aria-hidden="true">&nbsp;↗</span></a>
+      </div>
+      <div class="hero-art">
+        <img src="images/banner.png" alt="Bộ thẻ Kinh Dịch Dabala">
+      </div>
+    </section>
+
+    <section class="products" id="san-pham">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Bộ sưu tập</p>
+            <h2>Ba bộ bài chủ đạo</h2>
+          </div>
+          <p class="section-note">Mỗi bộ bài mở ra một cách tiếp cận riêng với biểu tượng và triết lý của Kinh Dịch.</p>
+        </div>
+
+        <div class="grid">
+          <article class="product">
+            <a class="product-image" href="https://shopee.vn/B%E1%BB%99-64-Th%E1%BA%BB-Kinh-D%E1%BB%8Bch-%C4%90%E1%BB%8Ba-S%C6%A1n-Khi%C3%AAm-C%C3%B3-S%C3%A1ch-H%C6%B0%E1%BB%9Bng-D%E1%BA%ABn-Gi%E1%BA%A3i-Ngh%C4%A9a-%E1%BB%A8ng-D%E1%BB%A5ng-Gieo-Qu%E1%BA%BB-%C4%90%E1%BA%A7u-N%C4%83m-i.1296032201.29975345146?extraParams=%7B%22display_model_id%22%3A233775121809%2C%22model_selection_logic%22%3A3%7D&image_ids=vn-11134207-7ras8-m5xnxubk8ud4b8" target="_blank" rel="noopener noreferrer" aria-label="Mua Địa Sơn Khiêm trên Shopee">
+              <img src="images/1.webp" alt="Bộ thẻ Kinh Dịch Địa Sơn Khiêm" loading="lazy">
+            </a>
+            <h3>Địa Sơn Khiêm</h3>
+            <p>Bộ 64 thẻ Kinh Dịch kèm sách hướng dẫn giải nghĩa và ứng dụng gieo quẻ.</p>
+            <a class="buy" href="https://shopee.vn/B%E1%BB%99-64-Th%E1%BA%BB-Kinh-D%E1%BB%8Bch-%C4%90%E1%BB%8Ba-S%C6%A1n-Khi%C3%AAm-C%C3%B3-S%C3%A1ch-H%C6%B0%E1%BB%9Bng-D%E1%BA%ABn-Gi%E1%BA%A3i-Ngh%C4%A9a-%E1%BB%A8ng-D%E1%BB%A5ng-Gieo-Qu%E1%BA%BB-%C4%90%E1%BA%A7u-N%C4%83m-i.1296032201.29975345146?extraParams=%7B%22display_model_id%22%3A233775121809%2C%22model_selection_logic%22%3A3%7D&image_ids=vn-11134207-7ras8-m5xnxubk8ud4b8" target="_blank" rel="noopener noreferrer">Xem trên Shopee <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="product">
+            <a class="product-image" href="https://shopee.vn/B%E1%BB%99-64-Qu%E1%BA%BB-B%C3%A0i-Kinh-D%E1%BB%8Bch-H%E1%BB%8Fa-Thi%C3%AAn-%C4%90%E1%BA%A1i-H%E1%BB%AFu-R%C3%BAt-Qu%E1%BA%BB-T%E1%BB%B1-Nghi%E1%BB%87m-L%C3%BD-H%C3%A0ng-Ng%C3%A0y-KABALA-i.1296032201.28355339101?extraParams=%7B%22display_model_id%22%3A166573629800%2C%22model_selection_logic%22%3A3%7D&image_ids=vn-11134207-7r98o-lz2q2ov31rnxae" target="_blank" rel="noopener noreferrer" aria-label="Mua Hỏa Thiên Đại Hữu trên Shopee">
+              <img src="images/2.webp" alt="Bộ bài Kinh Dịch Hỏa Thiên Đại Hữu" loading="lazy">
+            </a>
+            <h3>Hỏa Thiên Đại Hữu</h3>
+            <p>Bộ 64 quẻ bài Kinh Dịch để rút quẻ, chiêm nghiệm và thực hành hằng ngày.</p>
+            <a class="buy" href="https://shopee.vn/B%E1%BB%99-64-Qu%E1%BA%BB-B%C3%A0i-Kinh-D%E1%BB%8Bch-H%E1%BB%8Fa-Thi%C3%AAn-%C4%90%E1%BA%A1i-H%E1%BB%AFu-R%C3%BAt-Qu%E1%BA%BB-T%E1%BB%B1-Nghi%E1%BB%87m-L%C3%BD-H%C3%A0ng-Ng%C3%A0y-KABALA-i.1296032201.28355339101?extraParams=%7B%22display_model_id%22%3A166573629800%2C%22model_selection_logic%22%3A3%7D&image_ids=vn-11134207-7r98o-lz2q2ov31rnxae" target="_blank" rel="noopener noreferrer">Xem trên Shopee <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="product">
+            <a class="product-image" href="https://shopee.vn/B%E1%BB%99-B%C3%A0i-Kinh-D%E1%BB%8Bch-64-Qu%E1%BA%BB-Phong-H%E1%BB%8Fa-Gia-Nh%C3%A2n-R%C3%BAt-Qu%E1%BA%BB-T%E1%BB%B1-Nghi%E1%BB%87m-L%C3%BD-H%C3%A0ng-Ng%C3%A0y-KABALA-i.1296032201.29109413823?extraParams=%7B%22display_model_id%22%3A241481751993%2C%22model_selection_logic%22%3A3%7D&image_ids=vn-11134207-81ztc-moj99kgib4zxe3" target="_blank" rel="noopener noreferrer" aria-label="Mua Phong Hỏa Gia Nhân trên Shopee">
+              <img src="images/3.webp" alt="Bộ bài Kinh Dịch Phong Hỏa Gia Nhân" loading="lazy">
+            </a>
+            <h3>Phong Hỏa Gia Nhân</h3>
+            <p>Bộ bài 64 quẻ Kinh Dịch, đồng hành cùng những suy ngẫm về gia đình và đời sống.</p>
+            <a class="buy" href="https://shopee.vn/B%E1%BB%99-B%C3%A0i-Kinh-D%E1%BB%8Bch-64-Qu%E1%BA%BB-Phong-H%E1%BB%8Fa-Gia-Nh%C3%A2n-R%C3%BAt-Qu%E1%BA%BB-T%E1%BB%B1-Nghi%E1%BB%87m-L%C3%BD-H%C3%A0ng-Ng%C3%A0y-KABALA-i.1296032201.29109413823?extraParams=%7B%22display_model_id%22%3A241481751993%2C%22model_selection_logic%22%3A3%7D&image_ids=vn-11134207-81ztc-moj99kgib4zxe3" target="_blank" rel="noopener noreferrer">Xem trên Shopee <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing wrap">
+      <p class="eyebrow">Bắt đầu hành trình</p>
+      <h2>Một quẻ. Một góc nhìn mới.</h2>
+      <p>Chọn bộ bài phù hợp và khám phá cách đưa trí tuệ Kinh Dịch vào những khoảnh khắc suy ngẫm của bạn.</p>
+      <a class="button" href="#san-pham">Chọn bộ bài của bạn</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> Dabala. All rights reserved.</span>
+      <span>Trí tuệ cổ xưa · Chiêm nghiệm hôm nay</span>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
