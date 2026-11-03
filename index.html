@@ -82,6 +82,27 @@
     .buy { display: inline-flex; gap: 9px; align-items: center; color: var(--green); font-weight: 750; font-size: 13px; }
     .buy span { transition: transform .2s; }
     .buy:hover span { transform: translateX(4px); }
+    .tools-section { padding: 76px 0 82px; background: #eef0e8; }
+    .featured-tool {
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      padding: 30px 34px; margin-bottom: 36px; background: var(--green); color: #fff;
+      border-radius: 4px;
+    }
+    .tool-kicker { color: #d9bd8d; text-transform: uppercase; letter-spacing: .15em; font-size: 10px; font-weight: 750; margin: 0 0 8px; }
+    .featured-tool h3 { font: 500 30px/1.2 Georgia, "Times New Roman", serif; margin: 0 0 8px; }
+    .featured-tool p:not(.tool-kicker) { margin: 0; color: rgba(255,255,255,.76); font-size: 14px; }
+    .featured-tool .button { background: #f7f4ed; color: var(--green); flex-shrink: 0; }
+    .featured-tool .button:hover { background: #fff; }
+    .tool-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; }
+    .tool-group h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin: 0 0 14px; }
+    .tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .tool-link {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 16px 17px; background: rgba(255,253,248,.82); border: 1px solid #e1e3d9;
+      border-radius: 3px; font-size: 14px; font-weight: 650; transition: border-color .2s, transform .2s;
+    }
+    .tool-link span:last-child { color: var(--gold); }
+    .tool-link:hover { border-color: var(--gold); transform: translateY(-2px); }
     .closing { padding: 74px 0; text-align: center; }
     .closing p { color: var(--muted); max-width: 540px; margin: 16px auto 26px; }
     footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: 12px; }
@@ -99,6 +120,10 @@
       .grid { grid-template-columns: 1fr; gap: 42px; }
       .product-image { aspect-ratio: 1 / 1; margin-bottom: 16px; }
       .product p { min-height: 0; }
+      .tools-section { padding: 58px 0 64px; }
+      .featured-tool { align-items: flex-start; flex-direction: column; padding: 25px; }
+      .tool-groups { grid-template-columns: 1fr; gap: 30px; }
+      .tool-grid { grid-template-columns: 1fr; }
       .closing { padding: 58px 0; }
       .footer-inner { flex-direction: column; gap: 6px; }
     }
@@ -164,6 +189,52 @@
             <p>Bộ bài 64 quẻ Kinh Dịch, đồng hành cùng những suy ngẫm về gia đình và đời sống.</p>
             <a class="buy" href="https://shopee.vn/B%E1%BB%99-B%C3%A0i-Kinh-D%E1%BB%8Bch-64-Qu%E1%BA%BB-Phong-H%E1%BB%8Fa-Gia-Nh%C3%A2n-R%C3%BAt-Qu%E1%BA%BB-T%E1%BB%B1-Nghi%E1%BB%87m-L%C3%BD-H%C3%A0ng-Ng%C3%A0y-KABALA-i.1296032201.29109413823?extraParams=%7B%22display_model_id%22%3A241481751993%2C%22model_selection_logic%22%3A3%7D&image_ids=vn-11134207-81ztc-moj99kgib4zxe3" target="_blank" rel="noopener noreferrer">Xem trên Shopee <span aria-hidden="true">↗</span></a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section" id="cong-cu">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Khám phá trực tuyến</p>
+            <h2>Công cụ &amp; trải nghiệm</h2>
+          </div>
+          <p class="section-note">Khám phá các công cụ chiêm nghiệm, tra cứu và thực hành được phát triển trong hệ sinh thái Dabala.</p>
+        </div>
+
+        <div class="featured-tool">
+          <div>
+            <p class="tool-kicker">Công cụ nổi bật</p>
+            <h3>Kinh Dịch</h3>
+            <p>Gieo quẻ, tra cứu và khám phá ý nghĩa 64 quẻ Kinh Dịch.</p>
+          </div>
+          <a class="button" href="https://dich.dabala.vn/" target="_blank" rel="noopener noreferrer">Mở công cụ <span aria-hidden="true">&nbsp;↗</span></a>
+        </div>
+
+        <div class="tool-groups">
+          <div class="tool-group">
+            <h3>Chiêm nghiệm &amp; tra cứu</h3>
+            <div class="tool-grid">
+              <a class="tool-link" href="https://tarot.dabala.vn/" target="_blank" rel="noopener noreferrer"><span>Tarot</span><span aria-hidden="true">↗</span></a>
+              <a class="tool-link" href="https://tuvi.dabala.vn/" target="_blank" rel="noopener noreferrer"><span>Lá số Tử Vi</span><span aria-hidden="true">↗</span></a>
+              <a class="tool-link" href="https://battu.dabala.vn/" target="_blank" rel="noopener noreferrer"><span>Lá số Bát Tự</span><span aria-hidden="true">↗</span></a>
+              <a class="tool-link" href="https://lich.dabala.vn/" target="_blank" rel="noopener noreferrer"><span>Lịch Vạn Niên</span><span aria-hidden="true">↗</span></a>
+              <a class="tool-link" href="https://matrix.dabala.vn/" target="_blank" rel="noopener noreferrer"><span>Ma Trận Định Mệnh</span><span aria-hidden="true">↗</span></a>
+              <a class="tool-link" href="https://khen.dabala.vn/" target="_blank" rel="noopener noreferrer"><span>Tạo giấy khen</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <div class="tool-group">
+            <h3>Chữa lành &amp; thực hành</h3>
+            <div class="tool-grid">
+              <a class="tool-link" href="https://chualanh.dabala.vn/" target="_blank" rel="noopener noreferrer"><span>Ho'oponopono</span><span aria-hidden="true">↗</span></a>
+              <a class="tool-link" href="https://hooponopono.dabala.vn/" target="_blank" rel="noopener noreferrer"><span>Ho'oponopono · Thực hành</span><span aria-hidden="true">↗</span></a>
+              <a class="tool-link" href="https://viemxoang.dabala.vn/" target="_blank" rel="noopener noreferrer"><span>Hiểu về viêm xoang</span><span aria-hidden="true">↗</span></a>
+              <a class="tool-link" href="https://tra.dabala.vn/" target="_blank" rel="noopener noreferrer"><span>Trà Đạo</span><span aria-hidden="true">↗</span></a>
+              <a class="tool-link" href="https://thien.dabala.vn/" target="_blank" rel="noopener noreferrer"><span>Thiền định</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
