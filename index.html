@@ -43,9 +43,9 @@
       font-size: 11px; font-weight: 750; margin: 0 0 18px;
     }
     h1 {
-      font-family: "Times New Roman", serif;
-      font-size: clamp(42px, 5.2vw, 48px); line-height: 1.08;
-       font-weight: 500; margin: 0 0 22px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 5.2vw, 68px); line-height: 1.08;
+      letter-spacing: -.035em; font-weight: 500; margin: 0 0 22px;
     }
     .hero-copy { max-width: 500px; color: var(--muted); font-size: 17px; margin: 0 0 30px; }
     .hero > div:first-child { min-width: 0; }
@@ -188,41 +188,58 @@
       <div class="hero-art" role="img" aria-label="Biểu tượng Bát Quái Kinh Dịch chuyển động">
         <div class="bagua" aria-hidden="true">
           <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="200" cy="200" r="190" stroke="#344B3B" stroke-opacity=".48" stroke-width="1.5"/>
-            <circle cx="200" cy="200" r="165" stroke="#B58A4A" stroke-opacity=".8" stroke-width="1.5"/>
-            <circle cx="200" cy="200" r="132" stroke="#344B3B" stroke-opacity=".28" stroke-width="1"/>
-            <g stroke="#344B3B" stroke-width="11" stroke-linecap="round">
-              <g transform="translate(200 35)">
-                <path d="M-27 0H27 M-27 17H27 M-27 34H27"/>
-              </g>
-              <g transform="translate(317 83) rotate(45)">
-                <path d="M-27 0H27 M-27 17H-5 M5 17H27 M-27 34H27"/>
-              </g>
-              <g transform="translate(365 200) rotate(90)">
-                <path d="M-27 0H27 M-27 17H-5 M5 17H27 M-27 34H27"/>
-              </g>
-              <g transform="translate(317 317) rotate(135)">
-                <path d="M-27 0H27 M-27 17H27 M-27 34H27"/>
-              </g>
-              <g transform="translate(200 365) rotate(180)">
-                <path d="M-27 0H27 M-27 17H-5 M5 17H27 M-27 34H27"/>
-              </g>
-              <g transform="translate(83 317) rotate(225)">
-                <path d="M-27 0H27 M-27 17H27 M-27 34H27"/>
-              </g>
-              <g transform="translate(35 200) rotate(270)">
-                <path d="M-27 0H27 M-27 17H-5 M5 17H27 M-27 34H27"/>
-              </g>
-              <g transform="translate(83 83) rotate(315)">
-                <path d="M-27 0H27 M-27 17H27 M-27 34H27"/>
-              </g>
-            </g>
+            <circle cx="200" cy="200" r="190" stroke="#344B3B" stroke-opacity=".28" stroke-width="1.2"/>
+            <circle cx="200" cy="200" r="165" stroke="#344B3B" stroke-opacity=".48" stroke-width="1.5"/>
+            <circle cx="200" cy="200" r="150" stroke="#B58A4A" stroke-opacity=".8" stroke-width="1.5"/>
+            <circle cx="200" cy="200" r="125" stroke="#344B3B" stroke-opacity=".22" stroke-width="1"/>
             <g stroke="#B58A4A" stroke-width="1.5">
-              <path d="M200 8V22 M200 378V392 M8 200H22 M378 200H392"/>
-              <path d="M64 64L74 74 M326 326L336 336 M336 64L326 74 M74 326L64 336"/>
+              <path d="M200 28V42 M200 358V372 M28 200H42 M358 200H372"/>
+              <path d="M78.4 78.4L88.3 88.3 M311.7 311.7L321.6 321.6 M321.6 78.4L311.7 88.3 M88.3 311.7L78.4 321.6"/>
+            </g>
+            <!-- Later-Heaven arrangement: Li, Xun, Zhen, Gen, Kan, Kun, Dui, Qian -->
+            <g stroke="#344B3B" stroke-width="10" stroke-linecap="round">
+              <!-- Li ☲: yang / yin / yang, top to bottom -->
+              <g transform="translate(200 55)">
+                <path d="M-22 -18H22 M-22 0H-6 M6 0H22 M-22 18H22"/>
+              </g>
+              <!-- Xun ☴: yang / yang / yin -->
+              <g transform="translate(302.5 97.5) rotate(45)">
+                <path d="M-22 -18H22 M-22 0H22 M-22 18H-6 M6 18H22"/>
+              </g>
+              <!-- Zhen ☳: yin / yin / yang -->
+              <g transform="translate(345 200) rotate(90)">
+                <path d="M-22 -18H-6 M6 -18H22 M-22 0H-6 M6 0H22 M-22 18H22"/>
+              </g>
+              <!-- Gen ☶: yang / yin / yin -->
+              <g transform="translate(302.5 302.5) rotate(135)">
+                <path d="M-22 -18H22 M-22 0H-6 M6 0H22 M-22 18H-6 M6 18H22"/>
+              </g>
+              <!-- Kan ☵: yin / yang / yin -->
+              <g transform="translate(200 345) rotate(180)">
+                <path d="M-22 -18H-6 M6 -18H22 M-22 0H22 M-22 18H-6 M6 18H22"/>
+              </g>
+              <!-- Kun ☷: yin / yin / yin -->
+              <g transform="translate(97.5 302.5) rotate(225)">
+                <path d="M-22 -18H-6 M6 -18H22 M-22 0H-6 M6 0H22 M-22 18H-6 M6 18H22"/>
+              </g>
+              <!-- Dui ☱: yin / yang / yang -->
+              <g transform="translate(55 200) rotate(270)">
+                <path d="M-22 -18H-6 M6 -18H22 M-22 0H22 M-22 18H22"/>
+              </g>
+              <!-- Qian ☰: yang / yang / yang -->
+              <g transform="translate(97.5 97.5) rotate(315)">
+                <path d="M-22 -18H22 M-22 0H22 M-22 18H22"/>
+              </g>
             </g>
           </svg>
-          <div class="bagua-core">☯</div>
+          <div class="bagua-core" aria-hidden="true">
+            <svg viewBox="0 0 100 100" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="44" fill="#344B3B"/>
+              <path d="M50 6 A44 44 0 0 1 50 94 A22 22 0 0 0 50 50 A22 22 0 0 1 50 6Z" fill="#f7f4ed"/>
+              <circle cx="50" cy="28" r="7" fill="#344B3B"/>
+              <circle cx="50" cy="72" r="7" fill="#f7f4ed"/>
+            </svg>
+          </div>
         </div>
         <div class="hero-art-label">Thái cực · Bát quái · Kinh Dịch</div>
       </div>
