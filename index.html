@@ -48,6 +48,8 @@
       letter-spacing: -.035em; font-weight: 500; margin: 0 0 22px;
     }
     .hero-copy { max-width: 500px; color: var(--muted); font-size: 17px; margin: 0 0 30px; }
+    .hero > div:first-child { min-width: 0; }
+    .hero h1 { max-width: 610px; }
     .button {
       display: inline-flex; align-items: center; justify-content: center;
       padding: 14px 23px; border-radius: 3px; background: var(--green);
@@ -58,9 +60,7 @@
       position: relative; display: grid; place-items: center;
       min-height: 390px; overflow: hidden; isolation: isolate;
       border-radius: 6px;
-      background:
-        radial-gradient(circle at 50% 50%, rgba(181,138,74,.13), transparent 43%),
-        linear-gradient(145deg, #e9e7dc, #f6f3eb 55%, #e1e5d9);
+      background: transparent;
     }
     .hero-art::before, .hero-art::after {
       content: ""; position: absolute; border: 1px solid rgba(52,75,59,.13);
@@ -181,7 +181,7 @@
     <section class="wrap hero">
       <div>
         <p class="eyebrow">Dabala · Nghiên cứu huyền học</p>
-        <h1>Nghiên cứu huyền học.<br>Khám phá triết học phương Đông.</h1>
+        <h1>Huyền học &amp; triết học<br>phương Đông.</h1>
         <p class="hero-copy">Dabala là dự án nghiên cứu huyền học và thiết kế những sản phẩm phục vụ việc nghiên cứu, tìm hiểu triết học phương Đông. Kinh Dịch là một trong những nhóm sản phẩm của Dabala.</p>
         <a class="button" href="#san-pham">Khám phá bộ bài <span aria-hidden="true">&nbsp;↗</span></a>
       </div>
